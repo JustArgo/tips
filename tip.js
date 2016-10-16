@@ -62,6 +62,7 @@ $.fn.tip = function(options){
 		}else if(config.position=='right'){
 			$(".tip_out").css("left",element_left+element_inner_width+5);
 			$(".tip_out").css("top",element_top+(element_outer_height-text_outer_height)/2);
+			$(".tip").css("position","absolute");
 		}else if(config.position=='left'){
 			$(".tip_out").css("left",element_left-element_inner_width-5);
 			$(".tip_out").css("top",element_top+(element_outer_height-text_outer_height)/2);
