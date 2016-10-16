@@ -32,27 +32,39 @@ $.fn.tip = function(options){
 		//获取input对象的 位置 和 宽度
 		var element_top  = $(element).offset().top;
 		var element_left = $(element).offset().left;
-		var element_width = $(element).width();
+		var element_inner_width = $(element).innerWidth();
+		var element_outer_width = $(element).outerWidth();
+		var element_inner_height = $(element).innerHeight();
+		var element_outer_height = $(element).outerHeight();
+		console.log("element_inner_width:"+element_inner_width+" element_outer_width:"+element_outer_width);
+		console.log("element_inner_height:"+element_inner_height+" element_outer_height:"+element_outer_height);
 		
-		
+		console.log("element_top:"+element_top+" element_left:"+element_left);
 		
 		var textHeight = $(".tip").height();
-		var textWidth =  $(".tip").width();
-		console.log(textHeight+" "+element_width+" "+(element_width/2-textHeight/2));
+		var textWidth =  $(".tip").outerWidth();
+		var text_outer_height = $(".tip").outerHeight();
+		
+		
+		console.log("textHeight:"+textHeight+" textWidth:"+textWidth);
+		
+		console.log(textHeight+" "+element_outer_width+" "+(element_outer_width/2-textHeight/2));
 		
 		$(".tip_out").css("position","absolute");
 		if(config.position=='top'){
-			$(".tip_out").css("left",element_left-(element_width/2-textHeight/2));
+			//$(".tip_out").css("top",158);
+			//$(".tip_out").css("left",108);
+			$(".tip_out").css("left",element_left+(element_outer_width/2-textWidth/2));
 			$(".tip_out").css("top",element_top-textHeight-10);
 		}else if(config.position=='bottom'){
-			$(".tip_out").css("left",element_left-(element_width/2-textHeight/2));
+			$(".tip_out").css("left",element_left-(element_outer_width/2-textWidth/2));
 			$(".tip_out").css("top",element_top+textHeight+10);
 		}else if(config.position=='right'){
-			$(".tip_out").css("left",element_left+element_width+5);
-			$(".tip_out").css("top",element_top);
+			$(".tip_out").css("left",element_left+element_inner_width+5);
+			$(".tip_out").css("top",element_top+(element_outer_height-text_outer_height)/2);
 		}else if(config.position=='left'){
-			$(".tip_out").css("left",element_left-element_width-5);
-			$(".tip_out").css("top",element_top);
+			$(".tip_out").css("left",element_left-element_inner_width-5);
+			$(".tip_out").css("top",element_top+(element_outer_height-text_outer_height)/2);
 		}
 		
 		//处理 左右 的 margin
