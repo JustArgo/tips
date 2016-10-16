@@ -4,4 +4,43 @@
 	font-size:15px;
 	background-color:#756807;
 	border-radius:3px;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+.arrow-up {
+	width:0; 
+	height:0; 
+	border-left:5px solid transparent;
+	border-right:5px solid transparent;
+	border-bottom:5px solid #756807;
+	margin:0 auto;
+}
+.arrow-down {
+	width:0; 
+	height:0; 
+	border-left:5px solid transparent;
+	border-right:5px solid transparent;
+	border-top:5px solid #756807;
+	margin:0 auto;
+}
+.arrow-left {
+	width:0; 
+	height:0; 
+	border-top:5px solid transparent;
+	border-bottom:5px solid transparent;
+	border-right:5px solid #756807;
+}
+.arrow-right {
+	width:0; 
+	height:0; 
+	border-top:5px solid transparent;
+	border-bottom:5px solid transparent;
+	border-left:5px solid #756807;
+}
+.pull-left{ 
+	float:left;
+}
+.pull-right{
+	float:right;
 }

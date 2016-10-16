@@ -7,8 +7,8 @@
 		<script>
 			$(function(){
 				
-				var tip = new Tip();
-				tip.show(".username","用户名不能为空,密码不能为空");
+				
+				$(".username").tip({position:"top"});
 				
 				
 			})
@@ -18,20 +18,11 @@
 				margin-top:150px;
 				margin-left:100px;
 			}
-			.arrow-down {
-				width:0; 
-				height:0; 
-				border-left:5px solid transparent;
-				border-right:5px solid transparent;
-				border-top:5px solid #756807;
-				margin:0 auto;
-			}
 		</style>
 	</head>
 	<body>
 		
 		<input class="username" type="text"/>
-		<div class="arrow-down"></div>
 		
 		
 		
