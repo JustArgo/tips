@@ -57,8 +57,8 @@ $.fn.tip = function(options){
 			$(".tip_out").css("left",element_left+(element_outer_width/2-textWidth/2));
 			$(".tip_out").css("top",element_top-textHeight-10);
 		}else if(config.position=='bottom'){
-			$(".tip_out").css("left",element_left-(element_outer_width/2-textWidth/2));
-			$(".tip_out").css("top",element_top+textHeight+10);
+			$(".tip_out").css("left",element_left+(element_outer_width/2-textWidth/2));
+			//$(".tip_out").css("top",element_top+text_outer_height+10);
 		}else if(config.position=='right'){
 			$(".tip_out").css("left",element_left+element_inner_width+5);
 			$(".tip_out").css("top",element_top+(element_outer_height-text_outer_height)/2);
